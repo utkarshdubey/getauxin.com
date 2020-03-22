@@ -18,8 +18,8 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout title={siteTitle}>
       <SEO
-        title="Posts"
-        keywords={[`devlog`, `blog`, `gatsby`, `javascript`, `react`]}
+        title="Home"
+        keywords={[`homepage`, `home`, `ghar`]}
       />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
@@ -27,6 +27,20 @@ const BlogIndex = ({ data }, location) => {
           <h2 className="page-head-title">
             {data.site.siteMetadata.description}
           </h2>
+          <span style={{opacity: '80%', marginTop: "5%", padding: 5}}>Subscribe to our newsletter to get updates and notifications.</span>         
+          <form style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%'}}>
+            <input
+              type="email"
+              name="email"
+              id="demo-name"
+              placeholder="example@example.com"
+              style={{flexShrink: 1}}
+              required
+              />
+            <button type="submit" className="button primary fit" style={{margin: '15px', flexShrink: 3}}>
+              Subscribe
+            </button>
+          </form>
         </header>
       )}
       <div className="post-feed">
@@ -62,17 +76,10 @@ const indexQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date
             title
             description
             tags
-            thumbnail {
-              childImageSharp {
-                fluid(maxWidth: 1360) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
         }
       }
