@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
@@ -13,7 +13,10 @@ import "../utils/css/screen.css"
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  const [mail, setMail] = useState()
+
   let postCounter = 0
+
 
   return (
     <Layout title={siteTitle}>
@@ -28,7 +31,7 @@ const BlogIndex = ({ data }, location) => {
             {data.site.siteMetadata.description}
           </h2>
           <span style={{opacity: '80%', marginTop: "5%", padding: 5}}>Subscribe to our newsletter to get updates and notifications.</span>         
-          <form style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%'}}>
+          <form style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%'}} method="post" action="http://api.getauxin.com/register">
             <input
               type="email"
               name="email"
@@ -37,9 +40,7 @@ const BlogIndex = ({ data }, location) => {
               style={{flexShrink: 1}}
               required
               />
-            <button type="submit" className="button primary fit" style={{margin: '15px', flexShrink: 3}}>
-              Subscribe
-            </button>
+              <input type="submit" value="Subscribe" className="button primary fit" style={{margin: '15px', flexShrink: 3}}/>
           </form>
         </header>
       )}
