@@ -23,7 +23,7 @@ const ContactPage = ({ data }, location) => {
             <hr/>
             <div>
                 <h4>Email</h4>
-                <span>Email is the preferred way to contact us and get fast responses. Moreover, you can also hit us up on <a href="https://discord.gg/993sWfS">Discord</a> for an even faaaaaaster reply.</span>
+                <span>Email is the preferred way to contact us and get fast responses. Moreover, you can also hit us up on <a href="https://discord.gg/993sWfS">Discord</a> for a much faster reply.</span>
                 <h2 id="code">
                     <pre>
                         <code>
