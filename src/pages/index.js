@@ -31,15 +31,16 @@ const BlogIndex = ({ data }, location) => {
             {data.site.siteMetadata.description}
           </h2>
           <span style={{opacity: '80%', marginTop: "5%", padding: 5}}>Subscribe to our newsletter to get updates and notifications.</span>         
-          <form style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%'}} method="post" action="http://api.getauxin.com/register">
+          <form method="post" action="http://api.getauxin.com/register">
             <input
               type="email"
               name="email"
               id="demo-name"
-              placeholder="example@example.com"
+              placeholder="your email address"
               required
               />
-              <input type="submit" value="Subscribe" className="button primary fit" style={{margin: '15px', flexShrink: 3}}/>
+              <br/>
+              <input type="submit" value="Subscribe" className="button primary fit"/>
           </form>
         </header>
       )}
