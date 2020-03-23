@@ -37,7 +37,6 @@ const BlogIndex = ({ data }, location) => {
               name="email"
               id="demo-name"
               placeholder="example@example.com"
-              style={{flexShrink: 1}}
               required
               />
               <input type="submit" value="Subscribe" className="button primary fit" style={{margin: '15px', flexShrink: 3}}/>
