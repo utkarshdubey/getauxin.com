@@ -17,9 +17,10 @@ const VerifyPage = ({ data }, location) => {
       <article className="post-content page-template no-image">
         <div className="post-content-body">
             <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-                One last step
+                Check your email
             </h2>
-            <p style={{textAlign: 'center'}}>We have sent an email to your email address, please verify.  If you face any problems, reach out to us on <a href="mailto:getauxin@gmail.com">getauxin@gmail.com</a> or <a href="https://discord.gg/993sWfS">discord</a>.</p>
+            <p style={{textAlign: 'center'}}>We have sent an email to your email address, please verify. If you face any problems, reach out to us on <a href="mailto:getauxin@gmail.com">getauxin@gmail.com</a> or <a href="https://discord.gg/993sWfS">discord</a>.</p>
+            <p style={{color: 'red'}}>Note that there might be some delay while you receive the email. Please check it in 4-5 minutes if you don't receive it now.</p>
         </div>
       </article>
     </Layout>
