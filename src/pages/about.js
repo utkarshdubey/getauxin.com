@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,13 +26,32 @@ const AboutPage = ({ data }, location) => {
             />
             <figcaption>Large imagery is at the heart of this theme</figcaption>
           </figure> */}
-          <p>Auxin is an innovative technology that aims to help you get the best out of a video and instil a sense of advanced and productive learning to your daily online experience.</p> 
-          
-          <p>While watching an educational video, Auxin enhances your learning by assisting you with information that is up to the minute and helps in strengthening your grasp on the topic in an effortless yet efficient format. With the aid of informative graphs and stats to definitions and pictorials, we seek to stimulate learning by using media that appeals to masses.</p> 
-          
-          <p>Moreover, Auxin learns with you and the more you use it, more so it gets accustomed to the comfort of your ways and brings about the full effect of personalized education.</p>
-          
-          <p>Auxin commits to upgrade your online exposure, serve as a reliable platform and make your digital learning experience not just better, but the best.</p>
+          <p>
+            Auxin is an innovative technology that aims to help you get the best
+            out of a video and instil a sense of advanced and productive
+            learning to your daily online experience.
+          </p>
+
+          <p>
+            While watching an educational video, Auxin enhances your learning by
+            assisting you with information that is up to the minute and helps in
+            strengthening your grasp on the topic in an effortless yet efficient
+            format. With the aid of informative graphs and stats to definitions
+            and pictorials, we seek to stimulate learning by using media that
+            appeals to masses.
+          </p>
+
+          <p>
+            Moreover, Auxin learns with you and the more you use it, more so it
+            gets accustomed to the comfort of your ways and brings about the
+            full effect of personalized education.
+          </p>
+
+          <p>
+            Auxin commits to upgrade your online exposure, serve as a reliable
+            platform and make your digital learning experience not just better,
+            but the best.
+          </p>
         </div>
       </article>
     </Layout>
@@ -47,7 +65,6 @@ const indexQuery = graphql`
         title
       }
     }
-    
   }
 `
 /* benchAccounting: file(

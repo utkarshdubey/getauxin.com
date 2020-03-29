@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
@@ -13,34 +13,50 @@ import "../utils/css/screen.css"
 const BlogIndex = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  const [mail, setMail] = useState()
 
   let postCounter = 0
 
-
   return (
     <Layout title={siteTitle}>
-      <SEO
-        title="Home"
-        keywords={[`homepage`, `home`, `ghar`]}
-      />
+      <SEO title="Home" keywords={[`homepage`, `home`, `ghar`]} />
       {/* <Bio /> */}
       {data.site.siteMetadata.description && (
         <header className="page-head">
           <h2 className="page-head-title">
             {data.site.siteMetadata.description}
           </h2>
-          <span style={{opacity: '80%', marginTop: "5%", padding: 5}}>Subscribe to our newsletter to get updates and notifications.</span>         
-          <form method="post" action="http://api.getauxin.com/register">
+          <span style={{ opacity: "80%", marginTop: "5%", padding: 5 }}>
+            Subscribe to our newsletter to get updates and notifications.
+          </span>
+          <form
+            method="post"
+            action="http://api.getauxin.com/register"
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <input
               type="email"
               name="email"
               id="demo-name"
               placeholder="your email address"
               required
-              />
-              <br/>
-              <input type="submit" value="Subscribe" className="button primary fit"/>
+            />
+            <input
+              type="submit"
+              value="Subscribe"
+              className="button primary fit"
+              style={{ marginTop: "5px", marginBottom: "5px" }}
+            />
+            <div
+              className="g-recaptcha"
+              data-sitekey="6Ld77OQUAAAAAKJc7fvcI3ZlVDDllU3d_M4tBeUN"
+              style={{ marginTop: "5px", marginBottom: "5px" }}
+            />
           </form>
         </header>
       )}

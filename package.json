@@ -1,12 +1,9 @@
 {
-  "name": "gatsby-london-after-midnight",
+  "name": "getauxin",
   "private": true,
-  "description": "A custom, image-centric theme for Gatsby",
+  "description": "Official GetAuxin website",
   "version": "1.0.2",
-  "author": "Vaporwavy <i@ttv8.me> (https://vaporwavy.io)",
-  "bugs": {
-    "url": "https://github.com/vaporwavy/gatsby-london-after-midnight/issues"
-  },
+  "author": "Utkarsh Dubey <hello@utkarsh.co> (https://utkarsh.co)",
   "dependencies": {
     "gatsby": "^2.4.2",
     "gatsby-image": "^2.0.41",
@@ -46,7 +43,7 @@
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://getauxin.com",
   "keywords": [
     "gatsby",
     "ghost",
@@ -58,7 +55,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vaporwavy/gatsby-london-after-midnight.git"
+    "url": "git+https://github.com/utkarshdubey/getauxin.com"
   },
   "scripts": {
     "build": "gatsby build",

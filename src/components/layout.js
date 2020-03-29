@@ -1,11 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 const Layout = props => {
   const { title, children } = props
   const [toggleNav, setToggleNav] = React.useState(false)
   return (
     <div className={`site-wrapper ${toggleNav ? `site-head-open` : ``}`}>
+      <Helmet>
+        <script
+          src={`https://www.google.com/recaptcha/api.js?r=${Math.random()}`}
+          async
+          defer
+        />
+      </Helmet>
       <header className="site-head">
         <div className="site-head-container">
           <a
@@ -47,13 +55,13 @@ const Layout = props => {
           </div>
           <div className="site-head-right">
             <div className="social-links">
-              <a 
+              <a
                 href="https://discord.gg/993sWfS"
                 title="Discord"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-              Discord
+                Discord
               </a>
               <a
                 href="https://github.com/utkarshdubey/getauxin.com"
