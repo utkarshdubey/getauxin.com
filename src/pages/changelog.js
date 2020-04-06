@@ -12,12 +12,11 @@ const ChangelogPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
   const [changelogs, setChangelogs] = useState([])
   useEffect(() => {
-    ;(async () => {
-      const result = await axios.get(
-        "https://auxinapi.herokuapp.com/changelog/"
-      )
+    const fetchData = async () => {
+      const result = await axios.get("http://api.getauxin.com/changelog/")
       setChangelogs(result.data.data)
-    })()
+    }
+    fetchData()
   }, [])
 
   return (
