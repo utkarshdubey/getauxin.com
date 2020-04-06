@@ -46,6 +46,9 @@ const Layout = props => {
               <li className="nav-tags" role="menuitem">
                 <Link to={`/contact`}>Contact</Link>
               </li>
+              <li className="nav-tags" role="menuitem">
+                <Link to={`/changelog`}>Changelog</Link>
+              </li>
             </ul>
           </nav>
           <div className="site-head-center">
