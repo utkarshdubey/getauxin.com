@@ -30,7 +30,7 @@ const BlogIndex = ({ data }, location) => {
           </span>
           <form
             method="post"
-            action="http://api.getauxin.com/register"
+            action="https://auxinapi.herokuapp.com/register"
             style={{
               width: "100%",
               display: "flex",

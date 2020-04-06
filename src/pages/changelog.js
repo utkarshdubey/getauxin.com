@@ -13,7 +13,9 @@ const ChangelogPage = ({ data }, location) => {
   const [changelogs, setChangelogs] = useState([])
   useEffect(() => {
     ;(async () => {
-      const result = await axios.get("http://api.getauxin.com/changelog/")
+      const result = await axios.get(
+        "https://auxinapi.herokuapp.com/changelog/"
+      )
       setChangelogs(result.data.data)
     })()
   }, [])
