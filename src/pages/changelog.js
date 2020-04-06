@@ -10,11 +10,10 @@ const axios = require("axios")
 
 const ChangelogPage = ({ data }, location) => {
   const siteTitle = data.site.siteMetadata.title
-  const [changelogs, setChangelogs] = useState()
+  const [changelogs, setChangelogs] = useState([])
   useEffect(() => {
     ;(async () => {
-      const result = await axios("http://api.getauxin.com/changelog/")
-      console.log(result)
+      const result = await axios.get("http://api.getauxin.com/changelog/")
       setChangelogs(result.data.data)
     })()
   }, [])
@@ -28,45 +27,54 @@ const ChangelogPage = ({ data }, location) => {
           <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
             Changelog
           </h2>
-          {changelogs.map(changelog => {
-            return (
-              <div style={{ border: "2px solid #1d1d1f", padding: 15 }}>
-                <h6>{changelog.title}</h6>
-                <span style={{ color: "#2997FF", fontSize: 16 }}>
-                  {changelog.date.toLocaleString("en-US")}
-                </span>
-                <br />
-                <br />
-                <span
+          <div>
+            {changelogs.map(changelog => {
+              return (
+                <div
                   style={{
-                    background: "white",
-                    padding: "5px",
-                    color: "black",
-                    textTransform: "lowercase",
+                    border: "2px solid #1d1d1f",
+                    padding: 15,
+                    marginTop: 10,
+                    marginBottom: 10,
                   }}
                 >
-                  {changelog.category}
-                </span>
-                <span
-                  style={{
-                    background: "black",
-                    padding: "5px",
-                    color: "white",
-                  }}
-                >
-                  {changelog.reference}
-                </span>
-                <div id="code">
-                  <pre>
-                    <code>{changelog.details}</code>
-                  </pre>
+                  <h6>{changelog.title}</h6>
+                  <span style={{ color: "#2997FF", fontSize: 16 }}>
+                    {changelog.date.toLocaleString("en-US")}
+                  </span>
+                  <br />
+                  <br />
+                  <span
+                    style={{
+                      background: "white",
+                      padding: "5px",
+                      color: "black",
+                      textTransform: "lowercase",
+                    }}
+                  >
+                    {changelog.category}
+                  </span>
+                  <span
+                    style={{
+                      background: "black",
+                      padding: "5px",
+                      color: "white",
+                    }}
+                  >
+                    {changelog.reference}
+                  </span>
+                  <div id="code">
+                    <pre>
+                      <code>{changelog.details}</code>
+                    </pre>
+                  </div>
+                  <span style={{ color: "#2997FF", fontSize: 16 }}>
+                    {changelog.author}
+                  </span>
                 </div>
-                <span style={{ color: "#2997FF", fontSize: 16 }}>
-                  {changelog.author}
-                </span>
-              </div>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       </article>
     </Layout>
