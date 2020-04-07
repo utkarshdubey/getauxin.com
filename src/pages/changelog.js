@@ -66,7 +66,14 @@ const ChangelogPage = ({ data }, location) => {
                     >
                       <h6>{changelog.title}</h6>
                       <span style={{ color: "#2997FF", fontSize: 16 }}>
-                        {changelog.date.toLocaleString("en-US")}
+                        {new Date(changelog.date).toLocaleString("en-US", {
+                          day: "numeric",
+                          month: "numeric",
+                          year: "numeric",
+                          hour: "numeric",
+                          minute: "numeric",
+                          hour12: true,
+                        })}
                       </span>
                       <br />
                       <br />
