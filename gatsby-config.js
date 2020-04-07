@@ -76,6 +76,12 @@ module.exports = {
         purgeOnly: ["components/", "/main.css", "bootstrap/"], // Purge only these files/folders
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-162957765-1`,
+      },
+    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
