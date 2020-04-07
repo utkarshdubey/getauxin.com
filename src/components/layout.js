@@ -86,6 +86,10 @@ const Layout = props => {
       <footer className="site-foot">
         &copy; {new Date().getFullYear()} <Link to={`/`}>{title}</Link>
       </footer>
+      <script async defer src="https://cdn.simpleanalytics.io/hello.js" />
+      <noscript>
+        <img src="https://api.simpleanalytics.io/hello.gif" alt="" />
+      </noscript>
     </div>
   )
 }
