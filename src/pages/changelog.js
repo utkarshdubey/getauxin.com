@@ -53,10 +53,11 @@ const ChangelogPage = ({ data }, location) => {
               placeholder="Search..."
               onChange={searchChangelogs}
             />
-            {filteredChangelogs.length == 0
+            {filteredChangelogs.length === 0
               ? changelogs.map(changelog => {
                   return (
                     <div
+                      key={changelog._id}
                       style={{
                         border: "2px solid #1d1d1f",
                         padding: 15,
