@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="80" />
@@ -6,7 +5,7 @@
 </p>
 
 <h1 align="center">
-  GetAuxin.com
+  Auxin is built proudly on Gatsby.
 </h1>
 
 ---
@@ -14,3 +13,4 @@
 The official getauxin.com website.
 
 **Link: https://getauxin.com**
+(Previously Shimasu)
